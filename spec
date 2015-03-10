@@ -40,7 +40,7 @@ list : ["no", "to", "if"]
 output : "no"
 
 
------------------
+-------------------------
 Spec 5
 
 Match length of characters from input word with words from list.
