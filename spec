@@ -50,3 +50,6 @@ example:
 Input 'on' checked against list words: "not, no". only "no" equal inputs length.
 
 --------------------------
+if input "a" equals "a" then return 'match'
+
+if input "a" does not equal "b" then return 'not a match'

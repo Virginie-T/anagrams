@@ -3,23 +3,56 @@
     class Anagram
     {
 
-        function detectAnagram($input_word) {
+        function detectAnagram($input_word, $list) {
 
-        $list = array ('a', 'b', 'c');
         $input_lowerCase = strtolower($input_word);
 
-        foreach ($list as $word_of_the_list) {
+        $split_input_word = str_split($input_lowerCase);
 
-            if ($input_lowerCase == $word_of_the_list) {
-                return $word_of_the_list;
-            }
-            else {
-                return "false";
-            }
-        }
-    }
+        sort($split_input_word);
 
+
+        foreach ($list as $word_list) {
+
+            $word_lowerCase = strtolower($word_list);
+
+            $split_word = str_split($word_lowerCase);
+
+            sort($split_word);
+
+                if ($split_word == $split_input_word) {
+                    return $input_lowerCase;
+                }
+                else {
+                    return $input_lowerCase;
+                }
+
+                array_push($input_return, $input_lowerCase);
+            }
+
+        return $input_return;
 
 }
 
+
+
+
 ?>
+
+<!--
+    foreach ($list as $word_list) {
+        $split_word = str_split($word_list);
+    }
+
+    // $split_list = str_split($list);
+    $split_input_word = str_split($input_lowerCase);
+    sort($split_word);
+    sort($split_input_word);
+
+    foreach ($split_word) {
+        if ($split_input_word == $split_word) {
+            return $word_list;
+        }
+        else {
+            return "false";
+        } -->
